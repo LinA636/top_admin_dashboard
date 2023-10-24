@@ -11,11 +11,12 @@ html, body {
 :root {
   --background-color-sidebar: #164e63;
   --background-color-main-container: #cbd5e1;
-  --background-color-cards: whitesmoke;
+  --background-main-color-cards: #f1f5f9;
+  --background-side-color-cards: #facc15;
   
   --color-title-text: black;
-  --color-sidebar-text: var(--background-color-cards);
-  --color-common-text: var(--background-color-main-container);
+  --color-sidebar-text: var(--background-main-color-cards);
+  --color-common-text: #64748b;
 }
 
 body {
@@ -108,7 +109,16 @@ svg {
 }
 
 .card {
-  background-color: var(--background-color-cards);
+  
+  padding: 20px;
+  padding-left: 30px;
+  border-radius: 8px;
+
+  background: linear-gradient(to right, var(--background-side-color-cards) 10px, var(--background-main-color-cards) 10px);
+}
+
+.card p {
+  color: var(--color-common-text);
 }
 
 
