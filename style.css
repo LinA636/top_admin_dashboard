@@ -17,6 +17,8 @@ html, body {
   --color-title-text: #171717;
   --color-sidebar-text: var(--background-main-color-cards);
   --color-common-text: #64748b;
+
+  --border-radius-main-content: 8px;
 }
 
 body {
@@ -111,7 +113,7 @@ body {
 .card {
   padding: 20px;
   padding-left: 30px;
-  border-radius: 8px;
+  border-radius: var(--border-radius-main-content);
   background: linear-gradient(to right, var(--background-side-color-cards) 10px, var(--background-main-color-cards) 10px);
 
   display: flex;
@@ -120,11 +122,11 @@ body {
   align-items: stretch;
 }
 
-.card p {
+.main_content p {
   color: var(--color-common-text);
 }
 
-.card .card_text {
+.card_text {
   flex: 1;
   align-self: stretch;
 }
@@ -146,7 +148,35 @@ body {
   fill: var(--color-title-text);
 }
 
-.announcements,
+.announcements {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.announcements .announcement_container {
+  background-color: var(--background-main-color-cards);
+  border-radius: var(--border-radius-main-content);
+  padding: 20px;
+  overflow: hidden;
+
+  flex: 1;
+  align-self: stretch;
+
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.announcement_container p {
+  font-size: small;
+}
+
+.announcement_container .border {
+  border-bottom: 1px solid var(--color-common-text) ;
+}
+
 .trending {
   background-color: white;
 }
