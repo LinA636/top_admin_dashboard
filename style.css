@@ -81,4 +81,38 @@ svg {
 /* main content */
 .main_content {
   background-color: var(--background-color-main-container);
+  padding: 20px;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+}
+
+.your_projects {
+  grid-row: 1/ span 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.your_projects .card_container {
+  flex: 1;
+  align-self: stretch;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.card {
+  background-color: var(--background-color-cards);
+}
+
+
+.announcements,
+.trending {
+  background-color: white;
 }
