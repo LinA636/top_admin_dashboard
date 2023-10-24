@@ -14,7 +14,7 @@ html, body {
   --background-main-color-cards: #f1f5f9;
   --background-side-color-cards: #facc15;
   
-  --color-title-text: black;
+  --color-title-text: #171717;
   --color-sidebar-text: var(--background-main-color-cards);
   --color-common-text: #64748b;
 }
@@ -65,7 +65,7 @@ body {
   gap: 10px;
 }
 
-svg {
+.sidebar svg {
   max-width: 100%;
   max-height: 100%;
   fill: var(--color-sidebar-text);
@@ -109,18 +109,42 @@ svg {
 }
 
 .card {
-  
   padding: 20px;
   padding-left: 30px;
   border-radius: 8px;
-
   background: linear-gradient(to right, var(--background-side-color-cards) 10px, var(--background-main-color-cards) 10px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
 }
 
 .card p {
   color: var(--color-common-text);
 }
 
+.card .card_text {
+  flex: 1;
+  align-self: stretch;
+}
+
+.card .card_links {
+  padding-top: 10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+}
+
+.card .card_links svg {
+  max-width: 100%;
+  max-height: 20px;
+  min-width: fit-content;
+  fill: var(--color-title-text);
+}
 
 .announcements,
 .trending {
