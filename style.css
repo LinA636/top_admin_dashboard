@@ -293,6 +293,13 @@ body {
 }
 
 /* hover effects */
-.links:hover {
+.icon_describtion_container:hover,
+.creation_button:hover,
+.profile_name:hover,
+.bell:hover,
+.announcement_card:hover,
+.card_links svg:hover,
+.card_title:hover {
   opacity: 50%;
 }
+
