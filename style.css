@@ -130,9 +130,33 @@ body {
   width: auto;
 }
 
+.profile_button_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
 
+  padding: 0px 20px 0px 20px;
+}
 
+.profile_button_container .profile_picture {
+  height: 60px;
+}
 
+.profile_button_container .profile_info_container {
+  flex: 1;
+}
+
+.creation_button {
+  background-color: var(--background-color-sidebar);
+  color: var(--color-sidebar-text);
+  border-radius: 40px;
+  border-style: none;
+  padding: 5px 10px 5px 10px;
+  width: 100px;
+  font-weight: bold;
+}
 
 /* main content */
 .main_content {
